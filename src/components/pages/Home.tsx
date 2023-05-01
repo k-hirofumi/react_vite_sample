@@ -1,17 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { RootState } from '../../reducks/Store';
-import { decrement, increment } from '../../reducks/CounterSlice';
+// import { RootState } from '../../reducks/_Store';
+// import { decrement, increment } from '../../reducks/CounterSlice';
 
 export const Home = () => {
-  const count = useSelector((state: RootState) => state.counter.value);
+  const user = useSelector((state: any) => state.users.value);
   const dispatch = useDispatch();
   return (
     <>
       <p>home</p>
       <Link to="/second">Second</Link>
       <br />
-      <button
+      {console.log(user)}
+      {/* <button
         aria-label="Increment value"
         onClick={() => dispatch(increment())}
       >
@@ -23,7 +24,7 @@ export const Home = () => {
         onClick={() => dispatch(decrement())}
       >
         Decrement
-      </button>
+      </button> */}
     </>
   );
 };
