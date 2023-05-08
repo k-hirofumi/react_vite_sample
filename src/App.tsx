@@ -3,20 +3,20 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import { BrowserRouter } from 'react-router-dom';
 import { Router } from './router/Router';
-import { store } from './store/storeConfig';
 // import createStore from './reducks/store/store'
 import { Provider } from 'react-redux';
 import './App.css';
+import { RecoilRoot } from 'recoil';
 
 // export const store = createStore()
 
 function App() {
   return (
-    <Provider store={store}>
+    <RecoilRoot>
       <BrowserRouter>
         <Router />
       </BrowserRouter>
-    </Provider>
+    </RecoilRoot>
   );
 }
 
