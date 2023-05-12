@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 
+
 export const Second = () => {
   return (
     <>
@@ -8,3 +9,5 @@ export const Second = () => {
     </>
   );
 };
+
+

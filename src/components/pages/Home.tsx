@@ -2,32 +2,23 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { getUserSelector } from '../../store/selectors/userSelector';
-
+import { Suspense, useEffect, useState } from 'react';
+import axios from 'axios';
+import Names from './Names';
 
 export const Home = () => {
-
-  const dispatch = useDispatch();
-  const userName = useRecoilValue(getUserSelector);
+    const [isReset,setIsReset] = useState<boolean>(false)
   return (
     <>
       <p>home</p>
       <Link to="/second">Second</Link>
       <br />
-      {/* <button
-        aria-label="Increment value"
-        onClick={() => dispatch(increment())}
-      >
-        Increment
-      </button>
-      <span>{useSelector(getValue)}</span>
-      <button
-        aria-label="Decrement value"
-        onClick={() => dispatch(decrement())}
-      >
-        Decrement
-      </button>
-      <br />
-      <p>userName: {useSelector(getUserName)}</p> */}
+      <Suspense fallback={<p>Loading...</p>}>
+        <Names reset= {isReset}/>
+      </Suspense>
+      <button onClick={() => setIsReset((val) => !val)}>ボタン</button>
+
     </>
   );
 };
+

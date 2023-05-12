@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg';
 import { BrowserRouter } from 'react-router-dom';
 import { Router } from './router/Router';
 // import createStore from './reducks/store/store'
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 import './App.css';
 import { RecoilRoot } from 'recoil';
 
