@@ -7,7 +7,7 @@ import { getUserInfo } from "../interfaces/userInterface";
 export const userSelector = selector({
     key: SelectorKeys.USER_SELECTOR,
     get: ({get}) => get(userState), //atomの値を取得して２倍して返す
-    set: ({set}, newValue) => set(userState, newValue) // atomに新しい値を設定する
+    set: ({set, reset}, newValue) => set(userState, newValue) // atomに新しい値を設定する
   });
 
 
