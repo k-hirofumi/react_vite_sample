@@ -17,6 +17,7 @@ export const Second = () => {
     <>
       <p>second</p>
       <Link to="/">Home</Link>
+      <Link to="/third">Third</Link>
       
       <ErrorBoundary fallback={<h2>Error!!!!</h2>}>
         <Suspense fallback={<h1>Loading...</h1>}>

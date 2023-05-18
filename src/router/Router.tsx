@@ -5,6 +5,7 @@ import { Second } from '../components/pages/Second';
 import { useRecoilValue } from 'recoil';
 import { isAuthAtom } from '../store/atoms/isAuth';
 import { UnAuth } from '../components/pages/UnAuth';
+import { Third } from '../components/pages/Third';
 
 export const Router = () => {
   const isAuth = useRecoilValue(isAuthAtom);
@@ -15,6 +16,7 @@ export const Router = () => {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/second" element={<Second />} />
+            <Route path="/third" element={<Third />} />
         </Routes> 
       : <UnAuth />}
     </>

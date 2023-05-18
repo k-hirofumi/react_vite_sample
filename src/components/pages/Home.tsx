@@ -18,6 +18,7 @@ export const Home = () => {
       {console.log('Home')}
       <p>home</p>
       <Link to="/second">Second</Link>
+      <Link to="/third">Third</Link>
       <br />
       <Suspense fallback={<p>Loading...</p>}>
         <Names reset= {isReset}/>
